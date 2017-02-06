@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+}
+BODY,
+HTML {
+  font-size: 14px;
+  height: 100%;
+}
+DIV.file-plan {
+  position: relative;
+  width: 608px;
+  height: 100%;
+  padding: 4px;
+  overflow: hidden;
+}
+DIV.file-plan UL.file-plan-list {
+  list-style-type: none;
+  position: absolute;
+  width: 600px;
+  top: 4px;
+  -webkit-transition: all 0.4s ease-in;
+  -moz-transition: all 0.4s ease-in;
+  -ms-transition: all 0.4s ease-in;
+  -o-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+DIV.file-plan UL.file-plan-list LI {
+  line-height: 38px;
+  background-color: #eee;
+  margin-bottom: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+DIV.file-plan UL.file-plan-list LI SPAN.badge {
+  display: inline-block;
+  background-color: #607D8B;
+  width: 58px;
+  color: white;
+  border-radius: 4px 0 0 4px;
+  margin-right: 8px;
+  text-align: center;
+}
+DIV.file-plan UL.file-plan-list LI UL.file-plan-list.level-1,
+DIV.file-plan UL.file-plan-list LI UL.file-plan-list.level-2,
+DIV.file-plan UL.file-plan-list LI UL.file-plan-list.level-3 {
+  right: -100%;
+  opacity: 0;
+  top: 0;
+}
+DIV.file-plan UL.file-plan-list LI UL.file-plan-list.level-1.visible,
+DIV.file-plan UL.file-plan-list LI UL.file-plan-list.level-2.visible,
+DIV.file-plan UL.file-plan-list LI UL.file-plan-list.level-3.visible {
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -ms-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  right: 0;
+  opacity: 1;
+  z-index: 999;
+}
+DIV.file-plan UL.file-plan-list.invisible:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  opacity: 0.9;
+}
+NAV {
+  padding: 4px 8px 0 4px;
+  width: 600px;
+}
+NAV BUTTON.back {
+  display: inline-block;
+  line-height: 38px;
+  border: none;
+  background-color: #607D8B;
+  color: white;
+  border-radius: 4px;
+  margin-right: 8px;
+  text-align: center;
+  font-size: 18px;
+  padding: 0 30px;
+  cursor: pointer;
+  outline: none;
+}
+NAV BUTTON.back.hidden {
+  display: none;
+}
+NAV H4 {
+  float: right;
+  line-height: 38px;
+  font-size: 24px;
+  text-transform: uppercase;
+}
